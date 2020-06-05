@@ -62,7 +62,7 @@ namespace ESFA.DC.PublicApi.EAS.Controllers
                     return BadRequest("Academic year passed is not a valid value");
                 }
 
-                var data = await _easRepositories[academicYear].GetSubmissionValues(cancellationToken, ukprn, pageSize ?? DefaultConstants.DefaultPageSize, pageNumber ?? DefaultConstants.DefaultPageNumber);
+                var data = await repository.GetSubmissionValues(cancellationToken, ukprn, pageSize ?? DefaultConstants.DefaultPageSize, pageNumber ?? DefaultConstants.DefaultPageNumber);
 
                 if (data?.TotalItems > 0)
                 {
