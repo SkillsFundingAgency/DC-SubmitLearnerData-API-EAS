@@ -60,8 +60,9 @@ stages:
     - script: |
         dotnet tool update -g dotnet-reportgenerator-globaltool --version 4.3.6  
         reportgenerator -reports:$(Build.SourcesDirectory)/**/*Tests/**/coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)/CodeCoverage -reporttypes:Cobertura
+
       displayName: Create Code coverage report
-      ensabled: false
+      enabled: false
    
     # Publish the code coverage result (summary and web site)
     # The summary allows to view the coverage percentage in the summary tab
