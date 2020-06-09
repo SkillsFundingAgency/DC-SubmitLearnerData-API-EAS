@@ -35,7 +35,7 @@ stages:
       displayName: gitversion
       inputs:
         versionSpec: '5.x'
-        updateAssemblyInfo: true
+        updateAssemblyInfo: false
 
     - task: gittools.gitversion.gitversion-task.GitVersion@4
       enabled: false
