@@ -32,7 +32,12 @@ stages:
       inputs:
         versionSpec: '>=5.3.1'
 
+    - task: GitVersion@5
+      inputs:
+        runtime: 'core'
+
     - task: gittools.gitversion.gitversion-task.GitVersion@4
+      enabled: false
       inputs:
         updateAssemblyInfo: true
         preferBundledVersion: false
