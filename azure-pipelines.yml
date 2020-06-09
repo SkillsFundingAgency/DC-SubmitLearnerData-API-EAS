@@ -19,7 +19,7 @@ stages:
       name: DCT
       demands:
       - BuildServer
-      - BuildImageVersion -equals 'v0'
+      - Agent.Name -equals 'dcol-bld-agnt-windows-dotnetcore-77c95f7b66-h5pcv'
       
     steps:
     - task: DotNetCoreInstaller@2
