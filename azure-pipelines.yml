@@ -19,7 +19,8 @@ stages:
       name: DCT
       demands:
       - BuildServer
-
+      - BuildImageVersion -equals 'v0'
+      
     steps:
     - task: DotNetCoreInstaller@2
       inputs:
