@@ -18,7 +18,7 @@ stages:
     pool:
       name: DCT
       demands:
-      - Agent.Name -equals 'dcol-bld-agnt-windows-dotnetcore-77c95f7b66-h5pcv'
+      - Agent.Name -equals 'DCT-PJC-DEV'
       
     steps:
     - task: DotNetCoreInstaller@2
