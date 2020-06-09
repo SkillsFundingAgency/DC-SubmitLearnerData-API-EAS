@@ -31,10 +31,11 @@ stages:
       enabled: false
       inputs:
         versionSpec: '>=5.3.1'
-
-    - task: GitVersion@5
+    - task: UseGitVersion@5
+      displayName: gitversion
       inputs:
-        runtime: 'core'
+        versionSpec: '5.x'
+        updateAssemblyInfo: true
 
     - task: gittools.gitversion.gitversion-task.GitVersion@4
       enabled: false
