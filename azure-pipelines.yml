@@ -37,12 +37,12 @@ stages:
         versionSpec: '5.x'
         updateAssemblyInfo: false
 
-    - task: gittools.gitversion.gitversion-task.GitVersion@4
-      enabled: false
-      inputs:
-        updateAssemblyInfo: true
-        preferBundledVersion: false
-      displayName: GitVersion
+    # - task: gittools.gitversion.gitversion-task.GitVersion@5
+    #   enabled: false
+    #   inputs:
+    #     updateAssemblyInfo: true
+    #     preferBundledVersion: false
+    #   displayName: GitVersion
 
     - task: DotNetCoreCLI@2
       displayName: 'Restore Nuget packages'
