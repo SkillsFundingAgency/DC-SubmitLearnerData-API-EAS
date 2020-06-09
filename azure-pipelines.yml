@@ -18,7 +18,6 @@ stages:
     pool:
       name: DCT
       demands:
-      - BuildServer
       - Agent.Name -equals 'dcol-bld-agnt-windows-dotnetcore-77c95f7b66-h5pcv'
       
     steps:
