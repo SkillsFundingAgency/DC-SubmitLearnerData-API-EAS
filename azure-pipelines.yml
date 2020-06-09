@@ -31,6 +31,7 @@ stages:
       enabled: false
       inputs:
         versionSpec: '>=5.3.1'
+        
     - task: UseGitVersion@5
       displayName: gitversion
       inputs:
