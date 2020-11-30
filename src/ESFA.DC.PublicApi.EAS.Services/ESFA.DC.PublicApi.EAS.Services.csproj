@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <CodeAnalysisRuleSet>ESFA.DC.PublicApi.FCS.Services.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <CodeAnalysisRuleSet>ESFA.DC.PublicApi.FCS.Services.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ESFA.DC.Api.Common.Paging" Version="0.1.6" />
+    <PackageReference Include="ESFA.DC.EAS1819.EF" Version="0.1.14" />
+    <PackageReference Include="ESFA.DC.EAS1920.EF" Version="0.0.122" />
+    <PackageReference Include="ESFA.DC.EAS2021.EF" Version="0.1.12" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ESFA.DC.PublicApi.EAS.Dtos\ESFA.DC.PublicApi.EAS.Dtos.csproj" />
+  </ItemGroup>
+
+</Project>
